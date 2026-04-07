@@ -1,0 +1,46 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:graphx="clr-namespace:GraphX.Controls;assembly=GraphX.Avalonia.Controls"
+        xmlns:local="clr-namespace:GraphX.Avalonia.Demo.Controls"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="700"
+        x:Class="GraphX.Avalonia.Demo.Views.MainWindow"
+        Title="GraphX Avalonia Demo"
+        Width="1000" Height="700"
+        WindowStartupLocation="CenterScreen">
+
+  <Grid RowDefinitions="Auto,*,Auto">
+    <!-- Header -->
+    <Border Grid.Row="0" Background="#2196F3" Padding="10">
+      <StackPanel Orientation="Horizontal" Spacing="10">
+        <TextBlock Text="GraphX Avalonia Demo" 
+                   FontSize="20" FontWeight="Bold" 
+                   Foreground="White" VerticalAlignment="Center"/>
+        <TextBlock Text="Cross-platform graph visualization" 
+                   FontSize="12" Foreground="#BBDEFB" 
+                   VerticalAlignment="Center"/>
+      </StackPanel>
+    </Border>
+
+    <!-- Graph Area -->
+    <graphx:ZoomControl x:Name="ZoomControl" Grid.Row="1"
+                        Background="#F5F5F5"
+                        IsPanEnabled="True"
+                        IsZoomEnabled="True"
+                        MinZoom="0.1" MaxZoom="10">
+      <local:DemoGraphArea x:Name="GraphArea" 
+                           Background="Transparent"/>
+    </graphx:ZoomControl>
+
+    <!-- Footer -->
+    <Border Grid.Row="2" Background="#ECEFF1" Padding="10">
+      <StackPanel Orientation="Horizontal" Spacing="20">
+        <TextBlock Text="🖱️ Mouse wheel to zoom" VerticalAlignment="Center"/>
+        <TextBlock Text="🖱️ Drag to pan" VerticalAlignment="Center"/>
+        <TextBlock Text="📦 Built with Avalonia 11" VerticalAlignment="Center"/>
+      </StackPanel>
+    </Border>
+  </Grid>
+
+</Window>

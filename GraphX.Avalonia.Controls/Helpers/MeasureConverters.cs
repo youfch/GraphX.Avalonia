@@ -1,5 +1,6 @@
 using System;
 using Avalonia;
+using GraphX.Measure;
 
 namespace GraphX.Controls.Helpers
 {
@@ -10,63 +11,63 @@ namespace GraphX.Controls.Helpers
     public static class MeasureConverters
     {
         // Avalonia.Point → GraphX.Measure.Point
-        public static Common.Measure.Point ToGraphX(this Point point)
-        {
-            return new Common.Measure.Point(point.X, point.Y);
-        }
-
-        // GraphX.Measure.Point → Avalonia.Point
-        public static Point ToAvalonia(this Common.Measure.Point point)
+        public static Point ToGraphX(this Avalonia.Point point)
         {
             return new Point(point.X, point.Y);
         }
 
-        // Avalonia.Size → GraphX.Measure.Size
-        public static Common.Measure.Size ToGraphX(this Size size)
+        // GraphX.Measure.Point → Avalonia.Point
+        public static Avalonia.Point ToAvalonia(this Point point)
         {
-            return new Common.Measure.Size(size.Width, size.Height);
+            return new Avalonia.Point(point.X, point.Y);
         }
 
-        // GraphX.Measure.Size → Avalonia.Size
-        public static Size ToAvalonia(this Common.Measure.Size size)
+        // Avalonia.Size → GraphX.Measure.Size
+        public static Size ToGraphX(this Avalonia.Size size)
         {
             return new Size(size.Width, size.Height);
         }
 
-        // Avalonia.Rect → GraphX.Measure.Rect
-        public static Common.Measure.Rect ToGraphX(this Rect rect)
+        // GraphX.Measure.Size → Avalonia.Size
+        public static Avalonia.Size ToAvalonia(this Size size)
         {
-            return new Common.Measure.Rect(rect.X, rect.Y, rect.Width, rect.Height);
+            return new Avalonia.Size(size.Width, size.Height);
         }
 
-        // GraphX.Measure.Rect → Avalonia.Rect
-        public static Rect ToAvalonia(this Common.Measure.Rect rect)
+        // Avalonia.Rect → GraphX.Measure.Rect
+        public static Rect ToGraphX(this Avalonia.Rect rect)
         {
             return new Rect(rect.X, rect.Y, rect.Width, rect.Height);
         }
 
-        // Avalonia.Vector → GraphX.Measure.Vector
-        public static Common.Measure.Vector ToGraphX(this Vector vector)
+        // GraphX.Measure.Rect → Avalonia.Rect
+        public static Avalonia.Rect ToAvalonia(this Rect rect)
         {
-            return new Common.Measure.Vector(vector.X, vector.Y);
+            return new Avalonia.Rect(rect.X, rect.Y, rect.Width, rect.Height);
         }
 
-        // GraphX.Measure.Vector → Avalonia.Vector
-        public static Vector ToAvalonia(this Common.Measure.Vector vector)
+        // Avalonia.Vector → GraphX.Measure.Vector
+        public static Vector ToGraphX(this Avalonia.Vector vector)
         {
             return new Vector(vector.X, vector.Y);
         }
 
-        // Avalonia.Thickness → GraphX.Measure.Thickness
-        public static Common.Measure.Thickness ToGraphX(this Thickness thickness)
+        // GraphX.Measure.Vector → Avalonia.Vector
+        public static Avalonia.Vector ToAvalonia(this Vector vector)
         {
-            return new Common.Measure.Thickness(thickness.Left, thickness.Top, thickness.Right, thickness.Bottom);
+            return new Avalonia.Vector(vector.X, vector.Y);
+        }
+
+        // Avalonia.Thickness → GraphX.Measure.Thickness
+        public static Thickness ToGraphX(this Avalonia.Thickness thickness)
+        {
+            return new Thickness(thickness.Left, thickness.Top, thickness.Right, thickness.Bottom);
         }
 
         // GraphX.Measure.Thickness → Avalonia.Thickness
-        public static Thickness ToAvalonia(this Common.Measure.Thickness thickness)
+        public static Avalonia.Thickness ToAvalonia(this Thickness thickness)
         {
-            return new Thickness(thickness.Left, thickness.Top, thickness.Right, thickness.Bottom);
+            return new Avalonia.Thickness(thickness.Left, thickness.Top, thickness.Right, thickness.Bottom);
         }
     }
 }

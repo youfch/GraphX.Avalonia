@@ -1,0 +1,88 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:graphx="clr-namespace:GraphX.Controls">
+
+  <!-- ZoomControl Style -->
+  <Style Selector="graphx:ZoomControl">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="ClipToBounds" Value="True"/>
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Border Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                ClipToBounds="{TemplateBinding ClipToBounds}">
+          <graphx:ZoomContentPresenter x:Name="PART_Presenter"
+                                        ClipToBounds="False"/>
+        </Border>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+
+  <!-- ZoomContentPresenter Style -->
+  <Style Selector="graphx:ZoomContentPresenter">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="ClipToBounds" Value="False"/>
+  </Style>
+
+  <!-- VertexControl Style -->
+  <Style Selector="graphx:VertexControl">
+    <Setter Property="Background" Value="White"/>
+    <Setter Property="BorderBrush" Value="#333333"/>
+    <Setter Property="BorderThickness" Value="1"/>
+    <Setter Property="Width" Value="50"/>
+    <Setter Property="Height" Value="50"/>
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Border Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="4">
+          <ContentPresenter Content="{TemplateBinding Content}"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+        </Border>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+
+  <!-- EdgeControl Style -->
+  <Style Selector="graphx:EdgeControl">
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Canvas>
+          <Path x:Name="PART_edgePath"
+                Stroke="#333333"
+                StrokeThickness="2"/>
+        </Canvas>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+
+  <!-- VertexLabelControl Style -->
+  <Style Selector="graphx:VertexLabelControl">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Border Background="{TemplateBinding Background}"
+                Padding="4,2">
+          <ContentPresenter Content="{TemplateBinding Content}"/>
+        </Border>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+
+  <!-- DefaultEdgePointer Style -->
+  <Style Selector="graphx:DefaultEdgePointer">
+    <Setter Property="Width" Value="10"/>
+    <Setter Property="Height" Value="10"/>
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Polygon Points="0,0 10,5 0,10"
+                 Fill="#333333"
+                 Stretch="Uniform"/>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+
+</Styles>

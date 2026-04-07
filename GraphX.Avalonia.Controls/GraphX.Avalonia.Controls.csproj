@@ -11,11 +11,16 @@
 
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.2.3" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\GraphX.Standard.Common\GraphX.Standard.Common.csproj" />
     <ProjectReference Include="..\GraphX.Standard.Logic\GraphX.Standard.Logic.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Themes\*.axaml" />
   </ItemGroup>
 
 </Project>

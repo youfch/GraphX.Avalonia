@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>GraphX.Controls</RootNamespace>
+    <AssemblyName>GraphX.Avalonia.Controls</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GraphX.Standard.Common\GraphX.Standard.Common.csproj" />
+    <ProjectReference Include="..\GraphX.Standard.Logic\GraphX.Standard.Logic.csproj" />
+  </ItemGroup>
+
+</Project>
